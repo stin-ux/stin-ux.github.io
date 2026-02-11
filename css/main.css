@@ -622,7 +622,7 @@ html, body {
 
 /* Media Queries */
 
-@media (max-width: 60rem) {
+@media (max-width: 40rem) {
   .iteration-container {
     width: 60%;
     flex-direction: column;
@@ -689,4 +689,5 @@ html, body {
   width:3rem;
   height:auto;
   margin: 0 2rem;
+
 }
