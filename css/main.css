@@ -415,6 +415,7 @@ html, body {
 .project-title-container {
   display: flex;
   flex-direction: row;
+  margin-bottom: 2rem;
 }
 
 .project-title-container .heading-container {
@@ -449,6 +450,11 @@ html, body {
   color: #B2B8B6;
 }
 
+.process-main .default-container h1 {
+  margin:0;
+  padding-bottom: 1rem;
+}
+
 .project-title-container img {
   margin-right:0.5rem;
   align-self: center;
@@ -456,13 +462,12 @@ html, body {
 
 .process-wrapper h2 {
   padding:0;
-  margin: 3rem 0 0 0;
-  font-weight: 200;
-  font-style: italic;
+  margin: 2.5rem 0 1rem 0;
+  color: black;
 }
 
 .process-wrapper .default-container {
-  margin: 0 4vw;
+  margin: 1vw 4vw;
 }
 
 .styleguide-container h2 {
@@ -475,8 +480,8 @@ html, body {
 .iteration-container h2 {
   padding:0;
   margin: 1rem 0;
-  font-weight: bold;
-  font-style: normal;
+  font-style: italic;
+  font-size: 1rem;
 }
 
 .img-container img {
@@ -495,6 +500,64 @@ html, body {
 
 /* Project Overview Display */
 
+.project-overview-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap:1rem;
+  width: 100%;
+}
+
+.context-wrapper {
+  /* width: max-content; */
+  flex: 1;
+  height: min-content;
+  align-self: center;
+}
+
+.context-wrapper .anchor a {
+  display: flex;
+  width: min-content;
+  white-space: nowrap;
+  text-align: center;
+  gap: 0.25rem;
+}
+
+/* prover overview information grid */
+.info-grid {
+  display: grid;
+  margin-top: 3rem;
+  gap:1rem;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  padding: 1.5rem;
+
+  grid-template-areas:
+  "time tools"
+  "course  role";
+}
+
+#timeline {
+  grid-area: time;
+}
+
+#tools {
+  grid-area: tools;
+}
+
+#course {
+  grid-area: course;
+}
+
+#role {
+  grid-area: role;
+}
+/*  */
+
+.project-overview-container {
+  flex: 1;
+  align-self: center;
+}
+
 .project-display {
   width:100%;
   height:min-content;
@@ -507,9 +570,10 @@ html, body {
 }
 
 .project-display a {
-  display:block;
+  display:flex;
   width:min-content;
   white-space: nowrap;
+  text-align: center;
 }
 
 /* Process Info */
@@ -523,8 +587,7 @@ html, body {
 
 
 .process-wrapper .heading-container {
-  margin-top: 3rem;
-  margin-right: auto;
+  margin-top: auto 3rem;
 }
 
 .iteration-container {
@@ -536,8 +599,6 @@ html, body {
   justify-content: center;
   align-items: center;
   text-align: center;
-
-  gap:1rem;
 }
 
 .iteration-container img {
@@ -560,13 +621,18 @@ html, body {
 }
 
 /* Media Queries */
+
 @media (max-width: 60rem) {
   .iteration-container {
-    width: 100%;
+    width: 60%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+
+  .project-overview-wrapper {
+    flex-direction: column;
   }
 
   .img-container {
