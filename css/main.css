@@ -172,7 +172,7 @@ html, body {
   flex-direction: row;
   justify-content: space-between;
   gap:3rem;
-  width: 40vw;
+  width: 100%;
   margin: 0 auto;
 }
 
